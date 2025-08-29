@@ -1,0 +1,43 @@
+services:
+  database:
+    image: postgres:17-alpine
+    container_name: devcontainer-database
+    environment:
+      - POSTGRES_USER=backend
+      - POSTGRES_PASSWORD=mysecretpassword
+      - POSTGRES_DB=backend
+    volumes:
+      - devcontainer-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "backend", "-d", "backend"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: no
+
+  backend:
+    image: mcr.microsoft.com/devcontainers/python:3.13
+    container_name: devcontainer-backend
+    ports:
+      - 8000:8000
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+    #   interval: 5s
+    #   timeout: 5s
+    #   retries: 5
+    depends_on:
+      database:
+        condition: service_healthy
+    environment:
+      - DATABASE_HOST=database
+      - DATABASE_PORT=5432
+      - DATABASE_NAME=backend
+      - DATABASE_USER=backend
+      - DATABASE_PASSWORD=mysecretpassword
+    volumes:
+      - ../:/workspace:cached
+    restart: no
+
+volumes:
+  devcontainer-postgres-data:
+  devcontainer-pgadmin-data:
