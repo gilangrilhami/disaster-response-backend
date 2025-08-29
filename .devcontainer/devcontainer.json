@@ -1,0 +1,63 @@
+{
+	"name": "disaster-response-backend",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "backend",
+	"runServices": [
+		"database",
+		"backend"
+	],
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.analysis.typeCheckingMode": "basic",
+				"editor.defaultFormatter": "charliermarsh.ruff",
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": "explicit",
+					"source.fixAll": "explicit"
+				},
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"terminal.integrated.cwd": "/workspace",
+				"sqltools.connections": [
+					{
+						"previewLimit": 50,
+						"server": "database",
+						"port": 5432,
+						"driver": "PostgreSQL",
+						"name": "Database",
+						"database": "backend",
+						"username": "backend",
+						"password": "mysecretpassword"
+					}
+				]
+			},
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"GitHub.vscode-pull-request-github",
+				"PKief.material-icon-theme",
+				"charliermarsh.ruff",
+				"ms-python.debugpy",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"ms-python.pylint",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-pg",
+				"EchoAPI.echoapi-for-vscode"
+			]
+		}
+	},
+	"remoteUser": "vscode",
+	"workspaceFolder": "/workspace",
+	"forwardPorts": [
+		8000
+	],
+	"postCreateCommand": ".devcontainer/post-create.sh",
+	"postStartCommand": ".devcontainer/post-start.sh",
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {}
+	},
+	"overrideCommand": true
+}
