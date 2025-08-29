@@ -3,6 +3,25 @@
 	"dockerComposeFile": "docker-compose.yaml",
 	"service": "backend",
     "runServices": ["database", "backend"],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"GitHub.copilot",
+				"GitHub.copilot-chat",
+				"GitHub.vscode-pull-request-github",
+				"PKief.material-icon-theme",
+				"charliermarsh.ruff",
+				"ms-python.debugpy",
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-python.black-formatter",
+				"ms-python.pylint",
+				"mtxr.sqltools",
+				"mtxr.sqltools-driver-pg",
+				"EchoAPI.echoapi-for-vscode"
+			]
+		}
+	},
 	"remoteUser": "vscode",
     "workspaceFolder": "/workspace",
 	"forwardPorts": [
