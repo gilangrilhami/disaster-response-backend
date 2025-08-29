@@ -2,9 +2,36 @@
 	"name": "disaster-response-backend",
 	"dockerComposeFile": "docker-compose.yaml",
 	"service": "backend",
-    "runServices": ["database", "backend"],
+	"runServices": [
+		"database",
+		"backend"
+	],
 	"customizations": {
 		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.analysis.typeCheckingMode": "basic",
+				"editor.defaultFormatter": "charliermarsh.ruff",
+				"editor.formatOnSave": true,
+				"editor.codeActionsOnSave": {
+					"source.organizeImports": "explicit",
+					"source.fixAll": "explicit"
+				},
+				"terminal.integrated.defaultProfile.linux": "bash",
+				"terminal.integrated.cwd": "/workspace",
+				"sqltools.connections": [
+					{
+						"previewLimit": 50,
+						"server": "database",
+						"port": 5432,
+						"driver": "PostgreSQL",
+						"name": "Database",
+						"database": "backend",
+						"username": "backend",
+						"password": "mysecretpassword"
+					}
+				]
+			},
 			"extensions": [
 				"GitHub.copilot",
 				"GitHub.copilot-chat",
@@ -23,7 +50,7 @@
 		}
 	},
 	"remoteUser": "vscode",
-    "workspaceFolder": "/workspace",
+	"workspaceFolder": "/workspace",
 	"forwardPorts": [
 		8000
 	],
