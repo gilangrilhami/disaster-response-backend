@@ -1,4 +1,4 @@
-# Observing the Crisis Landscape
+# Observing Crisis Landscape
 The system concept originated from analyzing Indonesia’s recent disasters in 2025, which revealed a pattern of fragmented reporting and delayed coordination.
 
 - [Boarding School Collapse - Al Khoziny, East Java](https://www.reuters.com/world/asia-pacific/indonesia-ends-search-victims-boarding-school-collapse-61-dead-2025-10-07/)
@@ -18,7 +18,7 @@ By surveying recent news and official sources, it became clear that:
 
 - Public reporting and institutional response remained **fragmented** across agencies, media, and communication channels.
 
-# Deriving Patterns from Disaster Types
+# Pattern Extraction from Disaster Types
 Through clustering of the incidents, five broad categories emerged:
 | Category                             | Typical Examples                    | Dominant Characteristics             |
 | ------------------------------------ | ----------------------------------- | ------------------------------------ |
