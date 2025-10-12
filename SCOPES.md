@@ -52,3 +52,23 @@ That abstraction informed the three-module architecture; a minimal yet complete 
 | **Intake & Normalization**   | Unify heterogeneous reports (citizen, SMS, social media, sensors) into a consistent signal schema | Every disaster starts as a *fragmented signal*      |
 | **Case Registry & Workflow** | Merge related signals into structured *cases* with trackable actions and statuses                 | All crises evolve; status transparency builds trust |
 | **Subscriptions & Fan-Out**  | Deliver verified updates via SMS, social media, webhook, or app notifications                     | Timely awareness prevents escalation                |
+
+# Rational for Modules
+
+All three modules are combined to form an event-driven loop:
+
+> Detect → Contextualize → Disseminate.
+
+**Intake** answers the fragmentation problem. It receives and structure multiple fragmented signals (tweets, texts, API feeds).
+
+**Case Registry** answers the coordination gap. It's a centralized place for governments, NGOs, and citizens to track progress and accountability.
+
+**Subscriptions** answers the communication lag. One event triggers many notifications, ensuring inclusivity. This accomodates low-tech users through SMS.
+
+This design allows:
+
+- **Extensibility**: plug new sources or channels without altering the core.
+
+- **Transparency**: citizens see where reports stand and who acted.
+
+- **Interoperability**: open APIs support government dashboards, NGO tools, or public apps.
