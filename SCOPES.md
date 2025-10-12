@@ -39,3 +39,16 @@ Across all these categories, the common traits surfaced:
 - Requirement for cross-channel alerts to public and agencies.
 
 This synthesis allowed abstraction of disasters into **data flows** rather than event types — paving the way for modular backend thinking.
+
+# Conceptual Leap
+Instead of building one-off APIs per disaster type, the insight was:
+
+> "All crises are signals that must be normalized, contextualized, and communicated."
+
+That abstraction informed the three-module architecture; a minimal yet complete loop for input, reasoning, and output.
+
+| Module                           | Core Purpose                                                                                      | Inspired by Common Trait                            |
+| -------------------------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| **Intake & Normalization**   | Unify heterogeneous reports (citizen, SMS, social media, sensors) into a consistent signal schema | Every disaster starts as a *fragmented signal*      |
+| **Case Registry & Workflow** | Merge related signals into structured *cases* with trackable actions and statuses                 | All crises evolve; status transparency builds trust |
+| **Subscriptions & Fan-Out**  | Deliver verified updates via SMS, social media, webhook, or app notifications                     | Timely awareness prevents escalation                |
