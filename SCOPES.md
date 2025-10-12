@@ -17,3 +17,25 @@ By surveying recent news and official sources, it became clear that:
 - The **information bottleneck** existed not in detection but in **coordination**. In other words, how reports reach the right responders.
 
 - Public reporting and institutional response remained **fragmented** across agencies, media, and communication channels.
+
+# Deriving Patterns from Disaster Types
+Through clustering of the incidents, five broad categories emerged:
+| Category                             | Typical Examples                    | Dominant Characteristics             |
+| ------------------------------------ | ----------------------------------- | ------------------------------------ |
+| **Structural & Industrial Failures** | Building, quarry, mining, explosion | Human error, poor oversight          |
+| **Hydrometeorological Disasters**    | Floods, landslides, peat drainage   | Climate-driven, data-heavy, regional |
+| **Geological Hazards**               | Earthquake, volcanic activity       | Sensor-based, spatially predictable  |
+| **Transport & Maritime**             | Ferry sinking, air/road accidents   | Human + environmental overlap        |
+| **Environmental/Technological**      | Radiation, chemical contamination   | Regulatory, lab-based detection      |
+
+Across all these categories, the common traits surfaced:
+
+- Multiple data sources: citizen reports, sensors, media feeds.
+
+- Need for validation and triage before response.
+
+- Shared information gap between local and institutional levels.
+
+- Requirement for cross-channel alerts to public and agencies.
+
+This synthesis allowed abstraction of disasters into **data flows** rather than event types — paving the way for modular backend thinking.
