@@ -1,3 +1,19 @@
+# Overview
+The ideation began from examining recent disaster and crisis events in Indonesia — structural collapses, floods, volcanic eruptions, industrial accidents, and maritime tragedies.
+
+By classifying these crises into structural, hydrometeorological, geological, transport, and environmental domains, three unifying pain points surfaced — data fragmentation, case accountability, and communication lag.
+
+These insights shaped the architecture into three core modules: Intake, Case Registry, and Subscriptions, designed not to respond after a disaster but to prevent and preempt through information flow and early awareness.
+
+The result is a modular backend core capable of feeding multiple frontends, integrating with third-party systems, and supporting real-time transparency between citizens and institutions.
+
+# Table of Content
+- [Observing Crisis Landscape](#observing-crisis-landscape)
+- [Pattern Extraction from Disaster Types](#pattern-extraction-from-disaster-types)
+- [Conceptual Leap](#conceptual-leap)
+- [Rationale for Modules](#rationale-for-modules)
+
+
 # Observing Crisis Landscape
 The system concept originated from analyzing Indonesia’s recent disasters in 2025, which revealed a pattern of fragmented reporting and delayed coordination.
 
@@ -53,7 +69,7 @@ That abstraction informed the three-module architecture; a minimal yet complete 
 | **Case Registry & Workflow** | Merge related signals into structured *cases* with trackable actions and statuses                 | All crises evolve; status transparency builds trust |
 | **Subscriptions & Fan-Out**  | Deliver verified updates via SMS, social media, webhook, or app notifications                     | Timely awareness prevents escalation                |
 
-# Rational for Modules
+# Rationale for Modules
 
 All three modules are combined to form an event-driven loop:
 
